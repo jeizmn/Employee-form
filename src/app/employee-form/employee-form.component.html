@@ -1,0 +1,68 @@
+<div class="profile-section">
+  <h1>Employee Register</h1>
+  <form [formGroup]="employeeForm" (ngSubmit)="onSave()" class="profile-form">
+    <div>
+      <label>Name:</label>
+      <input type="text" formControlName="name" class="profile-form-text" required>
+      <div class="required" *ngIf="employeeForm.get('name')?.invalid && employeeForm.get('name')?.touched">
+        *Name is required
+      </div>
+    </div>
+  
+    <div>
+      <label>Address:</label>
+      <textarea formControlName="address" class="profile-form-text" required></textarea>
+      <div class="required" *ngIf="employeeForm.get('address')?.invalid && employeeForm.get('address')?.touched">
+        *Address is required
+      </div>
+    </div>
+  
+    <div>
+      <label>DOB:</label>
+      <input type="date" formControlName="dob" required>
+      <div class="required" *ngIf="employeeForm.get('dob')?.invalid && employeeForm.get('dob')?.touched">
+        *DOB is required
+      </div>
+    </div>
+  <br>
+    <div>
+      <label>Role:</label>
+      <select formControlName="role" class="profile-form-text" required>
+        <option value="admin">Admin</option>
+        <option value="manager">Manager</option>
+        <option value="hr">HR</option>
+        <option value="developer">Developer</option>
+      </select>
+      <div class="required" *ngIf="employeeForm.get('role')?.invalid && employeeForm.get('role')?.touched">
+        *Role is required
+      </div>
+    </div>
+  
+    <div>
+      <label>Phone:</label>
+      <input type="text" formControlName="phone" class="profile-form-text" required>
+      <div class="required" *ngIf="employeeForm.get('phone')?.invalid && employeeForm.get('phone')?.touched">
+        *phone number is required
+      </div>
+    </div>
+  
+    <div>
+      <label>Gender:</label>
+      <br><br>
+      <input type="radio" formControlName="gender"  value="male"> Male
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="radio" formControlName="gender"  value="female"> Female
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="radio" formControlName="gender"  value="tansgender"> Transgender
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="radio" formControlName="gender"  value="preferNotToSay"> Prefer not to say
+
+      <div class="required" *ngIf="employeeForm.get('gender')?.invalid && employeeForm.get('gender')?.touched">
+        *Gender is required
+      </div>
+    </div>
+  
+    <button   type="submit" class="profile-form-btn" value="Sign In">submit</button>
+  </form>
+  
+</div>

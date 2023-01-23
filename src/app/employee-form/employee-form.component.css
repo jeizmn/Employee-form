@@ -1,0 +1,61 @@
+
+.required{
+    color: red;
+}
+
+h1{
+    text-align: center;
+}
+label{
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-form{
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.profile-form-text{
+    display: block;
+    width: 92%;
+    box-sizing: border-box;
+    border: 0;
+    margin:15px;
+    padding: 15px;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+}
+
+.profile-form-text:focus{
+    box-shadow: 0 0 5px 4px rgb(199, 111, 0);
+}
+
+textarea.profile-form-text{
+    resize: none;
+    height: 130px;
+}
+
+.profile-form-btn{
+    display: block;
+    width: 92%;
+    box-sizing: border-box;
+    border: 0;
+    background: orange;
+    font-size: larger;
+    margin:15px;
+    padding: 15px;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.profile-form-btn:hover{
+    background: rgb(220, 145, 0);
+}
+
+
